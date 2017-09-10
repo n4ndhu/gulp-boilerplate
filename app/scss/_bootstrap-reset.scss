@@ -1,0 +1,58 @@
+// Modal
+.modal {
+    z-index: 99999999;
+    &.fade {
+        .modal-dialog {
+            transform: scaleX(0.7);
+        }
+    }
+    &.in .modal-dialog {
+        transform: scaleX(1);
+    }
+    .modal-content {
+        border: 0;
+        border-radius: 2px;
+        .modal-header {
+        	border-bottom:1px solid rgba(0,0,0,0.1);
+            h5 {
+                font-size: 1.1rem;
+                display: inline-block;
+                text-transform: uppercase;
+                font-family: $font2;
+            }
+        }
+        .modal-footer{
+        	border-top:1px solid rgba(0,0,0,0.1);
+        }
+    }
+}
+.modal-backdrop {
+    z-index: 99999980;
+}
+a{
+    &:focus,&:hover{
+        text-decoration: none;
+    }
+}
+.container {
+    @include breakpoint(xs) {
+        max-width: inherit;
+        width: inherit;
+    }
+    @include breakpoint(sm) {
+        max-width: inherit;
+        width: inherit;
+    }
+    @include breakpoint(md) {
+        max-width: inherit;
+        width: inherit;
+    }
+    @include breakpoint(lg) {
+        max-width: inherit;
+        width: inherit;
+    }
+    @include breakpoint(xl) {
+        max-width: 1200px;
+        width: 100%;
+    }
+}

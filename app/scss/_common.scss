@@ -1,0 +1,96 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    font-size:62.5%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font1;
+    font-size:1.4rem;
+    background:#f8f8f8;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+a {
+    backface-visibility: hidden;
+    -webkit-filter: blur(0px);
+}
+
+body .material-icons {
+    position: relative;
+    bottom: -0.15em;
+    font-size: inherit;
+}
+.pad-15,
+.pad15{
+    padding: 15px;
+}
+
+.no-ul,
+.clear-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.clearfix{
+    @include clearit;
+}
+
+.img-responsive {
+    max-width: 100%;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+.body-lock{
+    overflow:hidden;
+}
+.shadow-0{
+    box-shadow: none !important;
+}
+.shadow-1{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.shadow-2{
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+.shadow-3{
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+}
+.shadow-4{
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+}
+.shadow-5{
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,89 @@
+@mixin linearGradient($deg, $top, $bottom) {
+    background: $top;
+    background: linear-gradient($deg, $top 0%, $bottom 100%);
+}
+
+@mixin flex-width($w) {
+    flex:0 0 $w;
+    max-width: $w;
+}
+
+@mixin clearit {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+$xl:1200px;
+$lg:992px;
+$md:768px;
+$sm:576px;
+
+$max-xl:1199px;
+$max-lg:991px;
+$max-md:767px;
+$max-sm:575px;
+@mixin breakpoint($point) {
+    @if $point==xl {
+        @media (min-width: 1200px) {
+            @content ;
+        }
+    }
+    @else if $point==lg {
+        @media (min-width: 992px) {
+            @content ;
+        }
+    }
+    @else if $point==lgo {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content ;
+        }
+    }
+    @else if $point==md {
+        @media (min-width: 768px) {
+            @content ;
+        }
+    }
+    @else if $point==mdo {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content ;
+        }
+    }
+    @else if $point==sm {
+        @media (min-width: 576px) {
+            @content ;
+        }
+    }
+    @else if $point==smo {
+        @media (min-width: 576px) and (max-width: 767px) {
+            @content ;
+        }
+    }
+    @else if $point==xs {
+        @media (max-width: 575px) {
+            @content ;
+        }
+    }
+    @else {
+        @media (max-width: $point) {
+            @content ;
+        }
+    }
+}
+
+@mixin input-placeholder($color) {
+    &::-webkit-input-placeholder{
+        color: $color
+    }
+    &:-moz-placeholder{
+        color: $color
+    }
+    &::-moz-placeholder{
+        color: $color
+    }
+    &:-ms-input-placeholder{
+        color: $color
+    }
+}
