@@ -34,25 +34,3 @@ a{
         text-decoration: none;
     }
 }
-.container {
-    @include breakpoint(xs) {
-        max-width: inherit;
-        width: inherit;
-    }
-    @include breakpoint(sm) {
-        max-width: inherit;
-        width: inherit;
-    }
-    @include breakpoint(md) {
-        max-width: inherit;
-        width: inherit;
-    }
-    @include breakpoint(lg) {
-        max-width: inherit;
-        width: inherit;
-    }
-    @include breakpoint(xl) {
-        max-width: 1200px;
-        width: 100%;
-    }
-}

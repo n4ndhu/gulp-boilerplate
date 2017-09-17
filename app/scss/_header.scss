@@ -1,0 +1,8 @@
+header.main{
+	.container{
+		@extend %flex-middle;
+	}
+	.logo{
+		@include flex-width(15rem);
+	}
+}
